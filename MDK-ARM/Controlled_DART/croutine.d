@@ -1,0 +1,14 @@
+controlled_dart\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/croutine.c
+controlled_dart\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+controlled_dart\croutine.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+controlled_dart\croutine.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+controlled_dart\croutine.o: ../Core/Inc/FreeRTOSConfig.h
+controlled_dart\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+controlled_dart\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+controlled_dart\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+controlled_dart\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+controlled_dart\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+controlled_dart\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+controlled_dart\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+controlled_dart\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/croutine.h
+controlled_dart\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
