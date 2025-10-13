@@ -7,7 +7,7 @@
 Dart_data dart_data = {0};
 JY901S_data g_imu_data = {0};
 AS5600_TypeDef *sensor;
-extern vision_data g_vision_data;
+extern vision_rawdata g_vision_data;
 void DataGetInit(void)
 {
     Jy901s_Init();
@@ -49,7 +49,7 @@ IMU_data *IMUtrans(JY901S_data *imu_data)
     p->gyro_z = imu_data->fGyro[2];
     return p;
 }
-Vision_data *Visiontrans(vision_data *vision_data)
+Vision_data *Visiontrans(vision_rawdata *vision_rawdata)
 {
     Vision_data *p = (Vision_data *)malloc(sizeof(Vision_data));
     if (p == NULL)
@@ -57,8 +57,8 @@ Vision_data *Visiontrans(vision_data *vision_data)
         // Handle memory allocation failure
         return NULL;
     }
-    p->is_target = vision_data->detected;
-    p->dx = vision_data->dx;
-    p->dy = vision_data->dy;
+    p->is_target = vision_rawdata->detected;
+    p->dx = vision_rawdata->dx;
+    p->dy = vision_rawdata->dy;
     return p;
 }

@@ -6,7 +6,7 @@
 #include "stdint.h"
 
 uint8_t uart6_dma_rx_buf[UART6_DMA_RX_SIZE];
-vision_data g_vision_data = {0};
+vision_rawdata g_vision_data = {0};
 // 视觉数据处理函数
 void Vision_Uart6_DataHandler(uint8_t *buf)
 {

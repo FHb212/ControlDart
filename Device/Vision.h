@@ -7,6 +7,6 @@ typedef struct
     bool detected;
     int8_t dx;
     int8_t dy;
-} vision_data;
+} vision_rawdata;
 void Vision_Uart6_DataHandler(uint8_t *buf);
 void Vision_UART6_DMA_Start(void);

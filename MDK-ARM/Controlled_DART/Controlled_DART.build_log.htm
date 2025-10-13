@@ -27,6 +27,17 @@ Project File Date:  10/04/2025
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'Controlled_DART'
+compiling EncoderHal.c...
+..\Hal\EncoderHal.c(5): warning:  #223-D: function "calloc" declared implicitly
+  AS5600_TypeDef *AS5600_new(void) { return (AS5600_TypeDef *)calloc(1, sizeof(AS5600_TypeDef)); }
+..\Hal\EncoderHal.c(121): warning:  #111-D: statement is unreachable
+      return HAL_OK;
+..\Hal\EncoderHal.c(290): warning:  #167-D: argument of type "volatile uint8_t *" is incompatible with parameter of type "uint8_t *"
+  HAL_StatusTypeDef AS5600_write_config_register(AS5600_TypeDef *const handle) { return HAL_I2C_Mem_Write(handle->i2c_handle, AS5600_SHIFTED_SLAVE_ADDRESS, AS5600_REGISTER_CONF_HIGH, I2C_MEMADD_SIZE_8BIT, handle->config_register, 2, handle->i2c_timeout); }
+..\Hal\EncoderHal.c(320): warning:  #1-D: last line of file ends without a newline
+  }
+..\Hal\EncoderHal.c: 4 warnings, 0 errors
+compiling Fly_Task.c...
 compiling Bg_Task.c...
 ../Device/Beep.h(5): warning:  #1-D: last line of file ends without a newline
   void Beep_Off(void);
@@ -35,10 +46,20 @@ compiling Bg_Task.c...
 ..\Task\Bg_Task.c(29): warning:  #1-D: last line of file ends without a newline
   }
 ..\Task\Bg_Task.c: 3 warnings, 0 errors
+compiling main.c...
+compiling Vision.c...
+compiling Jy901s.c...
+..\Device\Jy901s.c(260): warning:  #1-D: last line of file ends without a newline
+  }
+..\Device\Jy901s.c(238): warning:  #177-D: variable "temp1"  was declared but never referenced
+      char temp1[5];
+..\Device\Jy901s.c(239): warning:  #177-D: variable "i"  was declared but never referenced
+      uint8_t i = 0;
+..\Device\Jy901s.c: 3 warnings, 0 errors
 linking...
-Program Size: Code=23000 RO-data=1108 RW-data=200 ZI-data=19320  
+Program Size: Code=19296 RO-data=1108 RW-data=188 ZI-data=18804  
 FromELF: creating hex file...
-"Controlled_DART\Controlled_DART.axf" - 0 Error(s), 3 Warning(s).
+"Controlled_DART\Controlled_DART.axf" - 0 Error(s), 10 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -62,7 +83,7 @@ Package Vendor: Keil
 
    * Component: ARM::CMSIS:CORE:5.5.0
       Include file:  CMSIS\Core\Include\tz_context.h
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:47
 </pre>
 </body>
 </html>
