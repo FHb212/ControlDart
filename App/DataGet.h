@@ -1,6 +1,7 @@
 #pragma once
 #include "struct_typedef.h"
-
+#include "Jy901s.h"
+#include "Vision.h"
 typedef struct
 {
     float Roll;
@@ -23,7 +24,7 @@ typedef struct
 {
     IMU_data imu;
     Vision_data vision;
-    float attack_angle;
+    uint16_t attack_angle;
 } Dart_data;
 
 void DataGetInit(void);
@@ -31,3 +32,4 @@ void DataGetInit(void);
 void DataGet(void);
 
 IMU_data *IMUtrans(JY901S_data *imu_data);
+Vision_data *Visiontrans(vision_rawdata *vision_rawdata);

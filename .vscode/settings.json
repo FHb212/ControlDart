@@ -6,6 +6,8 @@
     "vision.h": "c",
     "encoderhal.h": "c",
     "jy901s.h": "c",
-    "stm32f4xx_hal.h": "c"
+    "stm32f4xx_hal.h": "c",
+    "cstdlib": "c",
+    "dataget.h": "c"
   }
 }

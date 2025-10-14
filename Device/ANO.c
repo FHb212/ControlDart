@@ -132,7 +132,7 @@ void ANO_DT_send_vision(int16_t dx, int16_t dy, uint8_t detected)
     ANO_DT_Send_Data(data_to_send, _cnt);
 }
 
-void ANO_DT_send_encoder(int32_t encoder_count)
+void ANO_DT_send_encoder(uint16_t encoder_count)
 {
     unsigned char _cnt = 0;
     unsigned char i = 0;
@@ -147,8 +147,6 @@ void ANO_DT_send_encoder(int32_t encoder_count)
 
     data_to_send[_cnt++] = BYTE0(encoder_count);
     data_to_send[_cnt++] = BYTE1(encoder_count);
-    data_to_send[_cnt++] = BYTE2(encoder_count);
-    data_to_send[_cnt++] = BYTE3(encoder_count);
 
     data_to_send_out[3] = _cnt - 4;
 

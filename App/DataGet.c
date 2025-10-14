@@ -1,6 +1,4 @@
 #include "DataGet.h"
-#include "Jy901s.h"
-#include "Vision.h"
 #include "ANO.h"
 #include "EncoderHal.h"
 #include "i2c.h"
@@ -10,17 +8,15 @@ AS5600_TypeDef *sensor;
 extern vision_rawdata g_vision_data;
 void DataGetInit(void)
 {
-    Jy901s_Init();
+    JY901S_Init();
     Vision_UART6_DMA_Start();
-    ANO_Init();
-    EncoderHal_Init();
     sensor = AS5600_new();
     AS5600_init(sensor);
 }
 
 void DataGet(void)
 {
-    Jy901s_Get_Data(&g_imu_data);
+    JY901S_Get_Data(&g_imu_data);
     AS5600_get_rawAngle(sensor, &dart_data.attack_angle);
 }
 

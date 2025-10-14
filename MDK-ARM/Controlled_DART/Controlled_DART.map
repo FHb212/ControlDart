@@ -1266,6 +1266,22 @@ Section Cross References
     fly_control.o(i.FlyControl_Init) refers to fly_control.o(.bss) for servo_LU
     fly_control.o(i.FlyControl_SetAngle) refers to servo.o(i.Servo_SetAngle) for Servo_SetAngle
     fly_control.o(i.FlyControl_SetAngle) refers to fly_control.o(.bss) for servo_LU
+    dataget.o(i.DataGet) refers to jy901s.o(i.JY901S_Get_Data) for JY901S_Get_Data
+    dataget.o(i.DataGet) refers to encoderhal.o(i.AS5600_get_rawAngle) for AS5600_get_rawAngle
+    dataget.o(i.DataGet) refers to dataget.o(.bss) for g_imu_data
+    dataget.o(i.DataGet) refers to dataget.o(.data) for sensor
+    dataget.o(i.DataGetInit) refers to jy901s.o(i.JY901S_Init) for JY901S_Init
+    dataget.o(i.DataGetInit) refers to vision.o(i.Vision_UART6_DMA_Start) for Vision_UART6_DMA_Start
+    dataget.o(i.DataGetInit) refers to encoderhal.o(i.AS5600_new) for AS5600_new
+    dataget.o(i.DataGetInit) refers to encoderhal.o(i.AS5600_init) for AS5600_init
+    dataget.o(i.DataGetInit) refers to dataget.o(.data) for sensor
+    dataget.o(i.DataTrans) refers to dataget.o(i.IMUtrans) for IMUtrans
+    dataget.o(i.DataTrans) refers to memcpya.o(.text) for __aeabi_memcpy4
+    dataget.o(i.DataTrans) refers to dataget.o(i.Visiontrans) for Visiontrans
+    dataget.o(i.DataTrans) refers to dataget.o(.bss) for g_imu_data
+    dataget.o(i.DataTrans) refers to vision.o(.data) for g_vision_data
+    dataget.o(i.IMUtrans) refers to malloc.o(i.malloc) for malloc
+    dataget.o(i.Visiontrans) refers to malloc.o(i.malloc) for malloc
     fly_task.o(i.fly_task) refers to fly_control.o(i.FlyControl_Init) for FlyControl_Init
     fly_task.o(i.fly_task) refers to fly_control.o(i.FlyControl_SetAngle) for FlyControl_SetAngle
     fly_task.o(i.fly_task) refers to cmsis_os.o(i.osDelay) for osDelay
@@ -2420,7 +2436,7 @@ Removing Unused input sections from the image.
     Removing ano.o(.revsh_text), (4 bytes).
     Removing ano.o(.rrx_text), (6 bytes).
     Removing ano.o(i.ANO_DT_send_acc), (284 bytes).
-    Removing ano.o(i.ANO_DT_send_encoder), (164 bytes).
+    Removing ano.o(i.ANO_DT_send_encoder), (140 bytes).
     Removing ano.o(i.ANO_DT_send_euler), (284 bytes).
     Removing ano.o(i.ANO_DT_send_float), (172 bytes).
     Removing ano.o(i.ANO_DT_send_gyro), (284 bytes).
@@ -2436,6 +2452,22 @@ Removing Unused input sections from the image.
     Removing fly_control.o(.rev16_text), (4 bytes).
     Removing fly_control.o(.revsh_text), (4 bytes).
     Removing fly_control.o(.rrx_text), (6 bytes).
+    Removing dartcore.o(.rev16_text), (4 bytes).
+    Removing dartcore.o(.revsh_text), (4 bytes).
+    Removing dartcore.o(.rrx_text), (6 bytes).
+    Removing dataget.o(.rev16_text), (4 bytes).
+    Removing dataget.o(.revsh_text), (4 bytes).
+    Removing dataget.o(.rrx_text), (6 bytes).
+    Removing dataget.o(i.DataGet), (32 bytes).
+    Removing dataget.o(i.DataGetInit), (32 bytes).
+    Removing dataget.o(i.DataTrans), (52 bytes).
+    Removing dataget.o(i.IMUtrans), (94 bytes).
+    Removing dataget.o(i.Visiontrans), (34 bytes).
+    Removing dataget.o(.bss), (92 bytes).
+    Removing dataget.o(.data), (4 bytes).
+    Removing datasend.o(.rev16_text), (4 bytes).
+    Removing datasend.o(.revsh_text), (4 bytes).
+    Removing datasend.o(.rrx_text), (6 bytes).
     Removing fly_task.o(.rev16_text), (4 bytes).
     Removing fly_task.o(.revsh_text), (4 bytes).
     Removing fly_task.o(.rrx_text), (6 bytes).
@@ -2544,7 +2576,7 @@ Removing Unused input sections from the image.
     Removing dfixul.o(.text), (48 bytes).
     Removing cdcmple.o(.text), (48 bytes).
 
-855 unused section(s) (total 84531 bytes) removed from the image.
+871 unused section(s) (total 84889 bytes) removed from the image.
 
 ==============================================================================
 
@@ -2596,41 +2628,41 @@ Image Symbol Table
     ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
     ../clib/microlib/division.c              0x00000000   Number         0  uldiv.o ABSOLUTE
     ../clib/microlib/errno.c                 0x00000000   Number         0  errno.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
-    ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
     ../clib/microlib/malloc/calloc.c         0x00000000   Number         0  calloc.o ABSOLUTE
     ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  mallocra.o ABSOLUTE
     ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  malloca.o ABSOLUTE
-    ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  malloc.o ABSOLUTE
     ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  mallocr.o ABSOLUTE
+    ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  malloc.o ABSOLUTE
     ../clib/microlib/malloc/mvars.c          0x00000000   Number         0  mvars.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf2.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf5.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf4.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfb.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf0.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf1.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf2.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfa.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf7.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf3.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf6.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf8.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf7.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfa.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf4.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf3.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf5.o ABSOLUTE
     ../clib/microlib/stdio/fputc.c           0x00000000   Number         0  fputc.o ABSOLUTE
     ../clib/microlib/stdio/semi.s            0x00000000   Number         0  semi.o ABSOLUTE
     ../clib/microlib/stdio/streams.c         0x00000000   Number         0  stdout.o ABSOLUTE
@@ -2645,8 +2677,8 @@ Image Symbol Table
     ../fplib/microlib/f2d.c                  0x00000000   Number         0  f2d.o ABSOLUTE
     ../fplib/microlib/fpadd.c                0x00000000   Number         0  dadd.o ABSOLUTE
     ../fplib/microlib/fpdiv.c                0x00000000   Number         0  ddiv.o ABSOLUTE
-    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
     ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  fepilogue.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
     ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixul.o ABSOLUTE
     ../fplib/microlib/fpmul.c                0x00000000   Number         0  dmul.o ABSOLUTE
     ../fplib/microlib/fpsqrt.c               0x00000000   Number         0  dsqrt.o ABSOLUTE
@@ -2660,6 +2692,9 @@ Image Symbol Table
     ..\Algorithm\firstOrderLagFliter.c       0x00000000   Number         0  firstorderlagfliter.o ABSOLUTE
     ..\Algorithm\pid.c                       0x00000000   Number         0  pid.o ABSOLUTE
     ..\Algorithm\user_lib.c                  0x00000000   Number         0  user_lib.o ABSOLUTE
+    ..\App\DartCore.c                        0x00000000   Number         0  dartcore.o ABSOLUTE
+    ..\App\DataGet.c                         0x00000000   Number         0  dataget.o ABSOLUTE
+    ..\App\DataSend.c                        0x00000000   Number         0  datasend.o ABSOLUTE
     ..\App\Fly_Control.c                     0x00000000   Number         0  fly_control.o ABSOLUTE
     ..\Bsp\ANOBsp.c                          0x00000000   Number         0  anobsp.o ABSOLUTE
     ..\Bsp\Jy901sBsp.c                       0x00000000   Number         0  jy901sbsp.o ABSOLUTE
@@ -2712,6 +2747,9 @@ Image Symbol Table
     ..\\Algorithm\\firstOrderLagFliter.c     0x00000000   Number         0  firstorderlagfliter.o ABSOLUTE
     ..\\Algorithm\\pid.c                     0x00000000   Number         0  pid.o ABSOLUTE
     ..\\Algorithm\\user_lib.c                0x00000000   Number         0  user_lib.o ABSOLUTE
+    ..\\App\\DartCore.c                      0x00000000   Number         0  dartcore.o ABSOLUTE
+    ..\\App\\DataGet.c                       0x00000000   Number         0  dataget.o ABSOLUTE
+    ..\\App\\DataSend.c                      0x00000000   Number         0  datasend.o ABSOLUTE
     ..\\App\\Fly_Control.c                   0x00000000   Number         0  fly_control.o ABSOLUTE
     ..\\Bsp\\ANOBsp.c                        0x00000000   Number         0  anobsp.o ABSOLUTE
     ..\\Device\\ANO.c                        0x00000000   Number         0  ano.o ABSOLUTE
@@ -3320,25 +3358,25 @@ Memory Map of the image
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x08000000   0x08000000   0x00000198   Data   RO            3    RESET               startup_stm32f411xe.o
-    0x08000198   0x08000198   0x00000000   Code   RO         6493  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x08000198   0x08000198   0x00000004   Code   RO         6808    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x0800019c   0x0800019c   0x00000004   Code   RO         6811    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x080001a0   0x080001a0   0x00000000   Code   RO         6813    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x080001a0   0x080001a0   0x00000000   Code   RO         6815    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x080001a0   0x080001a0   0x00000008   Code   RO         6816    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x080001a8   0x080001a8   0x00000004   Code   RO         6823    .ARM.Collect$$$$0000000E  mc_w.l(entry12b.o)
-    0x080001ac   0x080001ac   0x00000000   Code   RO         6818    .ARM.Collect$$$$0000000F  mc_w.l(entry10a.o)
-    0x080001ac   0x080001ac   0x00000000   Code   RO         6820    .ARM.Collect$$$$00000011  mc_w.l(entry11a.o)
-    0x080001ac   0x080001ac   0x00000004   Code   RO         6809    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x08000198   0x08000198   0x00000000   Code   RO         6591  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x08000198   0x08000198   0x00000004   Code   RO         6906    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x0800019c   0x0800019c   0x00000004   Code   RO         6909    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x080001a0   0x080001a0   0x00000000   Code   RO         6911    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x080001a0   0x080001a0   0x00000000   Code   RO         6913    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x080001a0   0x080001a0   0x00000008   Code   RO         6914    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x080001a8   0x080001a8   0x00000004   Code   RO         6921    .ARM.Collect$$$$0000000E  mc_w.l(entry12b.o)
+    0x080001ac   0x080001ac   0x00000000   Code   RO         6916    .ARM.Collect$$$$0000000F  mc_w.l(entry10a.o)
+    0x080001ac   0x080001ac   0x00000000   Code   RO         6918    .ARM.Collect$$$$00000011  mc_w.l(entry11a.o)
+    0x080001ac   0x080001ac   0x00000004   Code   RO         6907    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
     0x080001b0   0x080001b0   0x000000be   Code   RO         5056    .emb_text           port.o
     0x0800026e   0x0800026e   0x00000002   PAD
     0x08000270   0x08000270   0x00000024   Code   RO            4    .text               startup_stm32f411xe.o
-    0x08000294   0x08000294   0x00000062   Code   RO         6496    .text               mc_w.l(uldiv.o)
-    0x080002f6   0x080002f6   0x00000024   Code   RO         6498    .text               mc_w.l(memcpya.o)
-    0x0800031a   0x0800031a   0x00000024   Code   RO         6502    .text               mc_w.l(memseta.o)
-    0x0800033e   0x0800033e   0x0000001e   Code   RO         6829    .text               mc_w.l(llshl.o)
-    0x0800035c   0x0800035c   0x00000020   Code   RO         6831    .text               mc_w.l(llushr.o)
-    0x0800037c   0x0800037c   0x00000024   Code   RO         6857    .text               mc_w.l(init.o)
+    0x08000294   0x08000294   0x00000062   Code   RO         6594    .text               mc_w.l(uldiv.o)
+    0x080002f6   0x080002f6   0x00000024   Code   RO         6596    .text               mc_w.l(memcpya.o)
+    0x0800031a   0x0800031a   0x00000024   Code   RO         6600    .text               mc_w.l(memseta.o)
+    0x0800033e   0x0800033e   0x0000001e   Code   RO         6927    .text               mc_w.l(llshl.o)
+    0x0800035c   0x0800035c   0x00000020   Code   RO         6929    .text               mc_w.l(llushr.o)
+    0x0800037c   0x0800037c   0x00000024   Code   RO         6955    .text               mc_w.l(init.o)
     0x080003a0   0x080003a0   0x0000001c   Code   RO         5467    i.ANO_DT_Send_Data  anobsp.o
     0x080003bc   0x080003bc   0x0000008c   Code   RO         5670    i.ANO_DT_send_int16  ano.o
     0x08000448   0x08000448   0x00000004   Code   RO          472    i.BusFault_Handler  stm32f4xx_it.o
@@ -3478,12 +3516,12 @@ Memory Map of the image
     0x08003dc6   0x08003dc6   0x00000002   PAD
     0x08003dc8   0x08003dc8   0x00000010   Code   RO         2506    i.__NVIC_GetPriorityGrouping  stm32f4xx_hal_cortex.o
     0x08003dd8   0x08003dd8   0x00000028   Code   RO         2507    i.__NVIC_SetPriority  stm32f4xx_hal_cortex.o
-    0x08003e00   0x08003e00   0x0000000e   Code   RO         6863    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x08003e0e   0x08003e0e   0x00000002   Code   RO         6864    i.__scatterload_null  mc_w.l(handlers.o)
-    0x08003e10   0x08003e10   0x0000000e   Code   RO         6865    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x08003e00   0x08003e00   0x0000000e   Code   RO         6961    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x08003e0e   0x08003e0e   0x00000002   Code   RO         6962    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08003e10   0x08003e10   0x0000000e   Code   RO         6963    i.__scatterload_zeroinit  mc_w.l(handlers.o)
     0x08003e1e   0x08003e1e   0x00000002   PAD
-    0x08003e20   0x08003e20   0x00000038   Code   RO         5887    i.bg_task           bg_task.o
-    0x08003e58   0x08003e58   0x00000028   Code   RO         5849    i.fly_task          fly_task.o
+    0x08003e20   0x08003e20   0x00000038   Code   RO         5985    i.bg_task           bg_task.o
+    0x08003e58   0x08003e58   0x00000028   Code   RO         5953    i.fly_task          fly_task.o
     0x08003e80   0x08003e80   0x00000038   Code   RO           16    i.main              main.o
     0x08003eb8   0x08003eb8   0x0000000e   Code   RO         4622    i.makeFreeRtosPriority  cmsis_os.o
     0x08003ec6   0x08003ec6   0x00000018   Code   RO         4624    i.osDelay           cmsis_os.o
@@ -3528,7 +3566,7 @@ Memory Map of the image
     0x08004e20   0x08004e20   0x00000018   Data   RO         3783    .constdata          system_stm32f4xx.o
     0x08004e38   0x08004e38   0x00000200   Data   RO         5288    .constdata          jy901shal.o
     0x08005038   0x08005038   0x00000028   Data   RO          247    .conststring        freertos.o
-    0x08005060   0x08005060   0x00000020   Data   RO         6861    Region$$Table       anon$$obj.o
+    0x08005060   0x08005060   0x00000020   Data   RO         6959    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08005080, Size: 0x00004a60, Max: 0x00020000, ABSOLUTE)
@@ -3571,10 +3609,11 @@ Image component sizes
         28          6          0          0          0        627   anobsp.o
         56          4          0          0          0        554   bg_task.o
        142          0          0          0          0      23151   cmsis_os.o
+         0          0          0          0          0        544   dartcore.o
        120          6          0          0          0        850   dma.o
          0          0          0          0          0      16952   event_groups.o
        172         44          0          0         48       1990   fly_control.o
-        40          6          0          0          0       1059   fly_task.o
+        40          6          0          0          0        515   fly_task.o
        130         28        124         12        596       2735   freertos.o
        152          8          0          0          0        963   gpio.o
        724         74          0         32      15360       7523   heap_4.o

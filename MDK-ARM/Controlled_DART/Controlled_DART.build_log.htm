@@ -27,41 +27,22 @@ Project File Date:  10/14/2025
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'Controlled_DART'
-compiling ANOBsp.c...
-compiling ANO.c...
-..\Device\ANO.h(19): warning:  #1-D: last line of file ends without a newline
+compiling DataGet.c...
+..\App\DataGet.h(35): warning:  #1-D: last line of file ends without a newline
+  Vision_data *Visiontrans(vision_rawdata *vision_rawdata);
+../Device/ANO.h(19): warning:  #1-D: last line of file ends without a newline
   void ANO_DT_send_int32(int32_t data1);
-..\Device\ANO.c(34): warning:  #223-D: function "ANO_DT_Send_Data" declared implicitly
-      ANO_DT_Send_Data(data_to_send, _cnt);
-..\Device\ANO.c(65): warning:  #223-D: function "ANO_DT_Send_Data" declared implicitly
-      ANO_DT_Send_Data(data_to_send, _cnt);
-..\Device\ANO.c(97): warning:  #223-D: function "ANO_DT_Send_Data" declared implicitly
-      ANO_DT_Send_Data(data_to_send, _cnt);
-..\Device\ANO.c(132): warning:  #223-D: function "ANO_DT_Send_Data" declared implicitly
-      ANO_DT_Send_Data(data_to_send, _cnt);
-..\Device\ANO.c(164): warning:  #223-D: function "ANO_DT_Send_Data" declared implicitly
-      ANO_DT_Send_Data(data_to_send, _cnt);
-..\Device\ANO.c(206): warning:  #223-D: function "ANO_DT_Send_Data" declared implicitly
-      ANO_DT_Send_Data(data_to_send, _cnt);
-..\Device\ANO.c(247): warning:  #223-D: function "ANO_DT_Send_Data" declared implicitly
-      ANO_DT_Send_Data(data_to_send, _cnt);
-..\Device\ANO.c(288): warning:  #223-D: function "ANO_DT_Send_Data" declared implicitly
-      ANO_DT_Send_Data(data_to_send, _cnt);
-..\Device\ANO.c: 9 warnings, 0 errors
-compiling Bg_Task.c...
-../Device/Beep.h(5): warning:  #1-D: last line of file ends without a newline
-  void Beep_Off(void);
-../Device/LED.h(5): warning:  #1-D: last line of file ends without a newline
-  void LED_Off(void);
-..\Task\Bg_Task.c(23): warning:  #223-D: function "ANO_DT_send_int16" declared implicitly
-          ANO_DT_send_int16((short)(imu_data.fAngle[2] * 100)); // �����������������������100��
-..\Task\Bg_Task.c(29): warning:  #1-D: last line of file ends without a newline
+..\App\DataGet.c(31): warning:  #223-D: function "malloc" declared implicitly
+      IMU_data *p = (IMU_data *)malloc(sizeof(IMU_data));
+..\App\DataGet.c(50): warning:  #223-D: function "malloc" declared implicitly
+      Vision_data *p = (Vision_data *)malloc(sizeof(Vision_data));
+..\App\DataGet.c(60): warning:  #1-D: last line of file ends without a newline
   }
-..\Task\Bg_Task.c: 4 warnings, 0 errors
+..\App\DataGet.c: 5 warnings, 0 errors
 linking...
 Program Size: Code=19500 RO-data=1108 RW-data=188 ZI-data=18852  
 FromELF: creating hex file...
-"Controlled_DART\Controlled_DART.axf" - 0 Error(s), 13 Warning(s).
+"Controlled_DART\Controlled_DART.axf" - 0 Error(s), 5 Warning(s).
 
 <h2>Software Packages used:</h2>
 
