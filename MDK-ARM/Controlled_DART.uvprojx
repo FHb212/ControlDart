@@ -1025,10 +1025,22 @@
               <FileType>1</FileType>
               <FilePath>..\Device\Vision.c</FilePath>
             </File>
+            <File>
+              <FileName>Servo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Device\Servo.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
           <GroupName>App</GroupName>
+          <Files>
+            <File>
+              <FileName>Fly_Control.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\App\Fly_Control.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>Task</GroupName>

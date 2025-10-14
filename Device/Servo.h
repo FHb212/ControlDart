@@ -10,6 +10,6 @@ typedef struct
 
 void Servo_Init(servo_data *servo, fp32 angle_set, TIM_HandleTypeDef *htim, uint32_t channel);
 
-void Servo_Set_Angle(servo_data *servo, fp32 angle_set);
+void Servo_SetAngle(servo_data *servo, fp32 angle_set);
 
-void Servo_Add_Angle(servo_data *servo, fp32 angle_add);
+void Servo_AddAngle(servo_data *servo, fp32 angle_add);

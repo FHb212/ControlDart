@@ -54,3 +54,4 @@ controlled_dart\fly_task.o: ../Device/Jy901s.h
 controlled_dart\fly_task.o: ../Bsp/Jy901sBsp.h
 controlled_dart\fly_task.o: ../Hal/EncoderHal.h
 controlled_dart\fly_task.o: ../Core/Inc/i2c.h
+controlled_dart\fly_task.o: ../App/FlyControl.h

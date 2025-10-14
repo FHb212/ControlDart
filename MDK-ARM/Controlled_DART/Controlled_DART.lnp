@@ -49,6 +49,8 @@
 "controlled_dart\jy901s.o"
 "controlled_dart\ano.o"
 "controlled_dart\vision.o"
+"controlled_dart\servo.o"
+"controlled_dart\fly_control.o"
 "controlled_dart\fly_task.o"
 "controlled_dart\bg_task.o"
 "controlled_dart\crc8_crc16.o"

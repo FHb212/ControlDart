@@ -4,6 +4,7 @@
 #include "Jy901s.h"
 #include "EncoderHal.h"
 #include "i2c.h"
+#include "FlyControl.h"
 extern TIM_HandleTypeDef htim2;
 uint16_t angle;
 HAL_StatusTypeDef status;
@@ -17,15 +18,12 @@ void fly_task(void const *argument)
     // sensor->dir_port = dir_GPIO_Port;
     // sensor->dir_pin = dir_Pin;
     // AS5600_init(sensor);
+    FlyControl_Init();
     for (;;)
     {
 
         // AS5600_get_rawAngle(sensor, &angle);
-        // 1. 启动 PWM
-        HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
-
-        // 2. 设置占空比（如 50%）
-        __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2, 1500);
+        FlyControl_SetAngle(0, 0, 0, 0);
         osDelay(1);
     }
     /* USER CODE END Start_Fly */

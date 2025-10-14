@@ -10,8 +10,8 @@ void FlyControl_Init(void)
 {
     Servo_Init(&servo_LU, LU_init_angle, &htim2, TIM_CHANNEL_1);
     Servo_Init(&servo_RU, RU_init_angle, &htim2, TIM_CHANNEL_2);
-    Servo_Init(&servo_RD, RD_init_angle, &htim2, TIM_CHANNEL_3);
-    Servo_Init(&servo_LD, LD_init_angle, &htim2, TIM_CHANNEL_4);
+    Servo_Init(&servo_RD, RD_init_angle, &htim3, TIM_CHANNEL_3);
+    Servo_Init(&servo_LD, LD_init_angle, &htim3, TIM_CHANNEL_4);
 }
 
 void FlyControl_SetAngle(float LU_angle, float RU_angle, float RD_angle, float LD_angle)
