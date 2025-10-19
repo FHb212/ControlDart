@@ -22,27 +22,19 @@ Dialog DLL:      TCM.DLL V1.53.0.0
  
 <h2>Project:</h2>
 C:\Users\34236\Desktop\project\stm32\Controlled_DART\MDK-ARM\Controlled_DART.uvprojx
-Project File Date:  10/14/2025
+Project File Date:  10/19/2025
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'Controlled_DART'
-compiling DataGet.c...
-..\App\DataGet.h(35): warning:  #1-D: last line of file ends without a newline
-  Vision_data *Visiontrans(vision_rawdata *vision_rawdata);
-../Device/ANO.h(19): warning:  #1-D: last line of file ends without a newline
-  void ANO_DT_send_int32(int32_t data1);
-..\App\DataGet.c(31): warning:  #223-D: function "malloc" declared implicitly
-      IMU_data *p = (IMU_data *)malloc(sizeof(IMU_data));
-..\App\DataGet.c(50): warning:  #223-D: function "malloc" declared implicitly
-      Vision_data *p = (Vision_data *)malloc(sizeof(Vision_data));
-..\App\DataGet.c(60): warning:  #1-D: last line of file ends without a newline
-  }
-..\App\DataGet.c: 5 warnings, 0 errors
+compiling Fly_Task.c...
+../App/FlyControl.h(10): warning:  #1-D: last line of file ends without a newline
+  void FlyControl_SetAngle(float LU_angle, float RU_angle, float RD_angle, float LD_angle);
+..\Task\Fly_Task.c: 1 warning, 0 errors
 linking...
-Program Size: Code=19500 RO-data=1108 RW-data=188 ZI-data=18852  
+Program Size: Code=23500 RO-data=1108 RW-data=200 ZI-data=19456  
 FromELF: creating hex file...
-"Controlled_DART\Controlled_DART.axf" - 0 Error(s), 5 Warning(s).
+"Controlled_DART\Controlled_DART.axf" - 0 Error(s), 1 Warning(s).
 
 <h2>Software Packages used:</h2>
 

@@ -57,3 +57,5 @@ controlled_dart\bg_task.o: ../Bsp/Jy901sBsp.h
 controlled_dart\bg_task.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 controlled_dart\bg_task.o: ../Bsp/ANOBsp.h
 controlled_dart\bg_task.o: ../Device/vision.h
+controlled_dart\bg_task.o: ../App/DataGet.h
+controlled_dart\bg_task.o: ../Device/ANO.h

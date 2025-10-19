@@ -1,6 +1,8 @@
 controlled_dart\dartcore.o: ..\App\DartCore.c
 controlled_dart\dartcore.o: ..\App\DartCore.h
-controlled_dart\dartcore.o: ..\App\DataGet.h
+controlled_dart\dartcore.o: ..\App\Flycontrol.h
+controlled_dart\dartcore.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+controlled_dart\dartcore.o: ../Algorithm/pid.h
 controlled_dart\dartcore.o: ../Algorithm/struct_typedef.h
 controlled_dart\dartcore.o: ../Core/Inc/main.h
 controlled_dart\dartcore.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
@@ -37,6 +39,10 @@ controlled_dart\dartcore.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ti
 controlled_dart\dartcore.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 controlled_dart\dartcore.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 controlled_dart\dartcore.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+controlled_dart\dartcore.o: ..\App\DataGet.h
 controlled_dart\dartcore.o: ../Device/Jy901s.h
 controlled_dart\dartcore.o: ../Bsp/Jy901sBsp.h
 controlled_dart\dartcore.o: ../Device/Vision.h
+controlled_dart\dartcore.o: ../Algorithm/arm_math.h
+controlled_dart\dartcore.o: ../Drivers/CMSIS/Include/core_cm4.h
+controlled_dart\dartcore.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

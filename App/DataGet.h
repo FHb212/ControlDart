@@ -31,5 +31,6 @@ void DataGetInit(void);
 
 void DataGet(void);
 
-IMU_data *IMUtrans(JY901S_data *imu_data);
-Vision_data *Visiontrans(vision_rawdata *vision_rawdata);
+IMU_data IMUtrans(const JY901S_data *imu_data);
+Vision_data Visiontrans(const vision_rawdata *vision_rawdata);
+void DataTrans(void);
