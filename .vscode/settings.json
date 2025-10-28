@@ -8,6 +8,7 @@
     "jy901s.h": "c",
     "stm32f4xx_hal.h": "c",
     "cstdlib": "c",
-    "dataget.h": "c"
+    "dataget.h": "c",
+    "usart.h": "c"
   }
 }

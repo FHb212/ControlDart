@@ -9,9 +9,9 @@ extern vision_rawdata g_vision_data;
 void DataGetInit(void)
 {
     JY901S_Init();
-    Vision_UART6_DMA_Start();
     sensor = AS5600_new();
     AS5600_init(sensor);
+    Vision_UART6_Init();
 }
 
 void DataGet(void)

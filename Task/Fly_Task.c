@@ -9,6 +9,7 @@ extern TIM_HandleTypeDef htim2;
 extern TIM_HandleTypeDef htim3;
 uint16_t angle;
 HAL_StatusTypeDef status;
+int32_t i = 0;
 void fly_task(void const *argument)
 {
     /* USER CODE BEGIN Start_Fly */
@@ -20,18 +21,27 @@ void fly_task(void const *argument)
     // sensor->dir_pin = dir_Pin;
     // AS5600_init(sensor);
     FlyControl_Init();
+    DartCore_Init();
     for (;;)
     {
 
         // AS5600_get_rawAngle(sensor, &angle);
-        // FlyControl_SetAngle(0, 0, 0, 0);
+      FlyControl_SetAngle(0, 0, 0, 0);
         // 1. 启动 PWM
+        // Dart_control_loop();
 
         // 2. 设置占空比（如 50%）
-        __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, 900);
-        __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2, 900);
-        __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_3, 900);
-        __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_4, 900);
+ //        __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, 1500);
+     //   __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2, 1500);
+     //    __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_3, 1500);
+			//         __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_4, 1500);
+        if (i <= 4000)
+        {
+            __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, 1000);
+            i++;
+        }
+        else
+            __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, 1000);
         osDelay(1);
     }
     /* USER CODE END Start_Fly */

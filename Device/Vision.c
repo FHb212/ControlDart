@@ -5,7 +5,7 @@
 #include "stm32f4xx_hal.h"
 #include "stdint.h"
 
-uint8_t uart6_dma_rx_buf[UART6_DMA_RX_SIZE];
+uint8_t uart6_rx_buf[UART6_RX_SIZE];
 vision_rawdata g_vision_data = {0};
 // 视觉数据处理函数
 void Vision_Uart6_DataHandler(uint8_t *buf)
@@ -18,7 +18,7 @@ void Vision_Uart6_DataHandler(uint8_t *buf)
     }
 }
 
-void Vision_UART6_DMA_Start(void)
+void Vision_UART6_Init(void)
 {
-    HAL_UART_Receive_DMA(&huart6, uart6_dma_rx_buf, UART6_DMA_RX_SIZE);
+    HAL_UART_Receive_IT(&huart6, uart6_rx_buf, UART6_RX_SIZE);
 }

@@ -29,5 +29,6 @@ void DartCore_XWing_Mix(float Mx, float My, float Mz,
                         float *LU, float *RU, float *RD, float *LD);
 
 void DartCore_XWing_Reverse(float A, float B, float C, float D, float *yaw, float *roll, float *pitch);
-void Dart_control_roll(float roll_angle_now, float roll_rate_now);
+void Dart_control_yaw_roll(float dyaw, float istarget, float roll_angle_now);
+void Dart_control_roll(float roll_angle_now);
 void Dart_control_loop();

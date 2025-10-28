@@ -5,7 +5,7 @@
 #include "jy901s.h"
 #include <stdio.h>
 #include "Vision.h"
-extern uint8_t uart6_dma_rx_buf[4]; // 如果大小不是4，请按实际修改
+extern uint8_t uart6_rx_buf[4];
 volatile char s_cDataUpdate = 0, s_cCmd = 0xff;
 uint8_t rData1[4];
 uint8_t rData2[1];
@@ -253,8 +253,10 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) // 中断函数
         WitSerialDataIn(temp2);
         HAL_UART_Receive_IT(&huart1, rData2, 1);
     }
-    else if (huart == &huart6)
+    if (huart == &huart6)
     {
-        Vision_Uart6_DataHandler(uart6_dma_rx_buf);
+        Vision_Uart6_DataHandler(uart6_rx_buf);
+        /* 重新开启 UART6 的中断接收，否则只会触发一次 */
+        HAL_UART_Receive_IT(&huart6, uart6_rx_buf, UART6_RX_SIZE);
     }
 }

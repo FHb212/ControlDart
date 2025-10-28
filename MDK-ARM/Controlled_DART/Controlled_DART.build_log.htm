@@ -22,7 +22,7 @@ Dialog DLL:      TCM.DLL V1.53.0.0
  
 <h2>Project:</h2>
 C:\Users\34236\Desktop\project\stm32\Controlled_DART\MDK-ARM\Controlled_DART.uvprojx
-Project File Date:  10/19/2025
+Project File Date:  10/23/2025
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
@@ -30,11 +30,13 @@ Build target 'Controlled_DART'
 compiling Fly_Task.c...
 ../App/FlyControl.h(10): warning:  #1-D: last line of file ends without a newline
   void FlyControl_SetAngle(float LU_angle, float RU_angle, float RD_angle, float LD_angle);
-..\Task\Fly_Task.c: 1 warning, 0 errors
+..\Task\Fly_Task.c(24): warning:  #223-D: function "DartCore_Init" declared implicitly
+      DartCore_Init();
+..\Task\Fly_Task.c: 2 warnings, 0 errors
 linking...
-Program Size: Code=23500 RO-data=1108 RW-data=200 ZI-data=19456  
+Program Size: Code=23356 RO-data=1108 RW-data=360 ZI-data=19816  
 FromELF: creating hex file...
-"Controlled_DART\Controlled_DART.axf" - 0 Error(s), 1 Warning(s).
+"Controlled_DART\Controlled_DART.axf" - 0 Error(s), 2 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -58,7 +60,7 @@ Package Vendor: Keil
 
    * Component: ARM::CMSIS:CORE:5.5.0
       Include file:  CMSIS\Core\Include\tz_context.h
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  16:960:29
 </pre>
 </body>
 </html>

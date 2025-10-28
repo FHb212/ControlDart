@@ -107,7 +107,7 @@ void MX_FREERTOS_Init(void)
   /* definition and creation of defaultTask */
   osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 128);
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
-  osThreadDef(Fly_Task, fly_task, osPriorityNormal, 0, 512);
+  osThreadDef(Fly_Task, fly_task, osPriorityRealtime, 0, 512);
   Fly_TaskHandle = osThreadCreate(osThread(Fly_Task), NULL);
   osThreadDef(Background_Task, bg_task, osPriorityNormal, 0, 256);
   Background_TaskHandle = osThreadCreate(osThread(Background_Task), NULL);
